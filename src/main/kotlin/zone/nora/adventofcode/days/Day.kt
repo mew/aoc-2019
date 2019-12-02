@@ -5,6 +5,7 @@ import zone.nora.adventofcode.util.Input
 abstract class Day {
     abstract val day: Int
     val input = Input.asList(day)
+    val inputAsString = Input.asString(day)
 
     fun run(part: Part): Any {
         return when (part) {
@@ -21,7 +22,7 @@ abstract class Day {
     abstract fun partTwo(): Any
 
     companion object {
-        val dayList = listOf<Day>(Day01)
+        val dayList = listOf(Day01, Day02)
     }
 
     enum class Part {
