@@ -22,7 +22,7 @@ abstract class Day {
     abstract fun partTwo(): Any
 
     companion object {
-        val dayList = listOf(Day01, Day02)
+        val dayList = listOf(Day01, Day02, Day03)
     }
 
     enum class Part {
