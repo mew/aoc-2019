@@ -7,27 +7,6 @@ object Day02 : Day() {
         get() = 2
 
     override fun partOne(): Any {
-        // I copied my solution for part one into a new function to help solve part two.
-        // This was my original solution vv
-        /*
-        * val ints = inputAsString.split(",").toMutableList()
-        * var hit99 = false
-        * ints[1] = "12"
-        * ints[2] = "2"
-        * for (i in ints.indices) {
-        *     if (!(i == 0 || (i.toDouble() / 4) == floor(i.toDouble() / 4))) continue
-        *     if (ints[i] == "99") hit99 = true
-        *     if (hit99) continue
-        *     val p1 = ints[ints[i+1].toInt()].toInt()
-        *     val p2 = ints[ints[i+2].toInt()].toInt()
-        *     val p3 = ints[i+3].toInt()
-        *     when (ints[i]) {
-        *         "1" -> ints[p3] = (p1 + p2).toString()
-        *         "2" -> ints[p3] = (p1 * p2).toString()
-        *     }
-        * }
-        * return ints[0]
-        */
         return solve(12, 2)
     }
 
@@ -48,6 +27,7 @@ object Day02 : Day() {
     }
 
     private fun solve(a: Int, b: Int): String {
+        // part 1 solution used again multiple times in part 2 so i made it a callable method
         val ints = inputAsString.split(",").toMutableList()
         var hit99 = false
         ints[1] = "$a"
