@@ -12,10 +12,12 @@ fun main(args: Array<String>) {
             return
         }
 
+        val startTime = System.currentTimeMillis()
         val d = Day.dayList[(day - 1)].run(Day.Part.ONE)
         ans("Part One:\n$d")
         val d2 = Day.dayList[(day - 1)].run(Day.Part.TWO)
         ans("Part Two:\n$d2")
+        with(TermColors()) { println(yellow("Finished in ${((System.currentTimeMillis() - startTime).toDouble() / 1000.toDouble())}s")) }
         return
     }
     error("Please provide a day.")
